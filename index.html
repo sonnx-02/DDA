@@ -1185,6 +1185,8 @@
      Chú thích mốc timeline ngang của template là 14px; quy ước trình chiếu đòi tối thiểu
      16px cho phần mô tả, nên nâng riêng ở deck này. Nhãn rộng 13vw vẫn đủ chỗ. */
   .timeline-h .th-node .desc{font-size:max(16px,.94vw);line-height:1.45}
+  /* Số trong ô vuông của trang đối chiếu bị .92em kéo xuống 13px — trả về đúng sàn 14px. */
+  .duo-compare .col-tag .num{font-size:1em}
 </style>
 </head>
 <body class="canvas-mode">
@@ -1238,7 +1240,7 @@
     </div>
 
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
-      <div data-anim="kicker" class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">DYNAMIC DIFFICULTY ADJUSTMENT · TIER 1—7</div>
+      <div data-anim="kicker" class="t-meta" style="color:rgba(255,255,255,.78);letter-spacing:.22em">DYNAMIC DIFFICULTY ADJUSTMENT · TIER 1–7</div>
 
       <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6.6vw,11.6vh);line-height:1.12;letter-spacing:-.025em;color:#fff">Game <span style="font-style:italic;font-weight:300">xếp</span> người chơi<br/>vào độ khó nào</h1>
 
@@ -1278,7 +1280,7 @@
         <div class="layer-nb">TRỤC 02 · THÀNH TÍCH</div>
         <div class="layer-ttl">Tier theo phong độ</div>
         <div class="layer-desc">Tier 1 đến 7, xếp riêng cho từng người chơi và độc lập với cỡ bàn. Đây là thứ quyết định bàn khó hay dễ — toàn bộ phần sau nói về nó.</div>
-        <div class="layer-tag">RANKLADDER · TIER 1—7</div>
+        <div class="layer-tag">RANKLADDER · TIER 1–7</div>
       </div>
       <div class="stack-block b-ink">
         <div class="layer-nb">NGUỒN NỘI DUNG</div>
@@ -1320,19 +1322,19 @@
         <span class="nb-corner">R3</span>
         <div class="t-cat" style="color:rgba(255,255,255,.62);margin-bottom:1.2vh">ĐẠT</div>
         <div class="ttl">Không leo thang quá nhanh</div>
-        <div class="desc">Phải hai ván thắng-sạch liên tiếp mới lên tier; thắng chật vật thì giữ nguyên.</div>
+        <div class="desc">Phải hai ván thắng sạch liên tiếp mới lên tier; thắng chật vật thì giữ nguyên.</div>
       </article>
       <article class="sub-card">
         <span class="nb-corner">R4</span>
         <div class="t-cat" style="margin-bottom:1.2vh">ĐẠT</div>
         <div class="ttl">Vào màn tức thì, bàn luôn giải được</div>
-        <div class="desc">Rút từ bank dựng sẵn, validate hai tầng — offline khi sinh và runtime trước khi dựng.</div>
+        <div class="desc">Rút từ bank dựng sẵn, kiểm hai tầng — offline lúc sinh và runtime trước khi dựng bàn.</div>
       </article>
       <article class="sub-card ink">
         <span class="nb-corner">R5</span>
         <div class="t-cat" style="color:var(--accent-bright);margin-bottom:1.2vh">CÒN LỖ HỔNG</div>
         <div class="ttl">Đọc đúng kỹ năng thật</div>
-        <div class="desc">Thắng-sạch phải đến từ tay người chơi, không phải từ booster hay trí nhớ.</div>
+        <div class="desc">Thắng sạch phải đến từ tay người chơi, không phải từ booster hay trí nhớ.</div>
       </article>
       <article class="sub-card">
         <span class="nb-corner">R6</span>
@@ -1351,7 +1353,7 @@
     <span class="ring-mat" style="position:absolute;left:5vw;bottom:9vh;width:14vw;height:14vw" aria-hidden="true"></span>
 
     <div class="chrome-min">
-      <div class="l">CƠ CHẾ</div>
+      <div class="l">CƠ CHẾ · BA CON SỐ</div>
       <div class="r">04 / 13</div>
     </div>
 
@@ -1456,10 +1458,10 @@
       <div class="col accent">
         <div class="col-tag"><span class="num">01</span> THẮNG</div>
         <div class="col-ttl" style="font-size:min(2.9vw,5.2vh)">Cần hai lần sạch</div>
-        <div class="col-desc">Thắng bất kỳ kiểu nào cũng xoá sạch chuỗi thua. Nhưng chỉ thắng-sạch mới được tính vào chuỗi thăng hạng.</div>
+        <div class="col-desc">Thắng bất kỳ kiểu nào cũng xoá sạch chuỗi thua. Nhưng chỉ thắng sạch mới được tính vào chuỗi thăng hạng.</div>
         <ul class="col-list">
-          <li>Sạch lần 1 → chuỗi = 1, tier giữ nguyên</li>
-          <li>Sạch lần 2 liên tiếp → tier +1, chuỗi về 0</li>
+          <li>Sạch lần đầu → chuỗi 1, tier giữ nguyên</li>
+          <li>Sạch lần hai liên tiếp → tier +1, chuỗi về 0</li>
           <li>Thắng chật vật → chuỗi về 0, tier giữ nguyên: bàn đang vừa tầm</li>
           <li>Không bao giờ vượt quá trần của dải level</li>
         </ul>
@@ -1468,10 +1470,10 @@
       <div class="col">
         <div class="col-tag"><span class="num">02</span> THUA</div>
         <div class="col-ttl" style="font-size:min(2.9vw,5.2vh)">Cần hai lần thua</div>
-        <div class="col-desc">Thua xoá chuỗi thắng-sạch ngay. Nhưng chỉ bắt đầu trừ tier từ level 21 — hai mươi màn đầu là giai đoạn học luật.</div>
+        <div class="col-desc">Thua xoá chuỗi thắng sạch ngay. Nhưng chỉ bắt đầu trừ tier từ level 21 — hai mươi màn đầu là giai đoạn học luật.</div>
         <ul class="col-list">
-          <li>Thua lần 1 → chuỗi = 1, tier giữ nguyên</li>
-          <li>Thua lần 2 liên tiếp → tier −1, chuỗi về 0</li>
+          <li>Thua lần đầu → chuỗi 1, tier giữ nguyên</li>
+          <li>Thua lần hai liên tiếp → tier −1, chuỗi về 0</li>
           <li>Trước level 21 → không đếm, không hạ tier</li>
           <li>Sàn là tier 1, không xuống thấp hơn được</li>
         </ul>
@@ -1495,9 +1497,10 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:1.2vh">
         <div class="t-cat" style="color:rgba(255,255,255,.6)">CÁCH RA BỐN CON SỐ</div>
-        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright)">01</span> &nbsp;Lời giải tối ưu của bàn này: <strong style="font-weight:600">9 nước</strong>.</div>
-        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright)">02</span> &nbsp;Quỹ nước <strong style="font-weight:600">9 + 6 = 15</strong>, vì tier 1 luôn được dư ít nhất 6 nước.</div>
-        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright)">03</span> &nbsp;Ngưỡng sạch <strong style="font-weight:600">15 − 3 = 12</strong>, cắt đúng một nửa của 6 nước dư đó.</div>
+        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright);margin-right:.7em">01</span>Lời giải tối ưu của bàn này: <strong style="font-weight:600">9 nước</strong>.</div>
+        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright);margin-right:.7em">02</span>Quỹ nước <strong style="font-weight:600">9 + 6 = 15</strong>, vì tier 1 luôn được dư ít nhất 6 nước.</div>
+        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright);margin-right:.7em">03</span>Ngưỡng sạch <strong style="font-weight:600">15 − 3 = 12</strong>, cắt đúng một nửa của 6 nước dư đó.</div>
+        <div class="t-body-sm"><span style="font-family:var(--mono);color:var(--accent-bright);margin-right:.7em">04</span>Mỗi lần đặt sai tốn khoảng hai nước, nên 6 nước dư tha được <strong style="font-weight:600">3 lỗi</strong>.</div>
       </div>
     </div>
 
@@ -1527,7 +1530,7 @@
         <div class="body-block h-2">
           <div class="lbl">SỐ LỖI ĐƯỢC THA</div>
           <div class="nb">3</div>
-          <div class="sub">Đi 13—15 nước vẫn thắng, nhưng tier đứng yên.</div>
+          <div class="sub">Đi 13–15 nước vẫn thắng, nhưng tier đứng yên.</div>
         </div>
       </div>
     </div>
@@ -1548,27 +1551,27 @@
     </div>
 
     <div class="h-bar-chart" data-anim="chart" style="margin-top:3.4vh">
-      <div class="row-lbl">Level 1 — 5</div>
+      <div class="row-lbl">Level 1–5</div>
       <div class="row-track"><div class="row-fill" style="width:14.3%"></div></div>
       <div class="row-val">T1</div>
 
-      <div class="row-lbl">Level 6 — 20</div>
+      <div class="row-lbl">Level 6–20</div>
       <div class="row-track"><div class="row-fill" style="width:28.6%"></div></div>
       <div class="row-val">T2</div>
 
-      <div class="row-lbl">Level 21 — 50</div>
+      <div class="row-lbl">Level 21–50</div>
       <div class="row-track"><div class="row-fill" style="width:42.9%"></div></div>
       <div class="row-val">T3</div>
 
-      <div class="row-lbl">Level 51 — 100</div>
+      <div class="row-lbl">Level 51–100</div>
       <div class="row-track"><div class="row-fill" style="width:57.1%"></div></div>
       <div class="row-val">T4</div>
 
-      <div class="row-lbl">Level 101 — 200</div>
+      <div class="row-lbl">Level 101–200</div>
       <div class="row-track"><div class="row-fill" style="width:71.4%"></div></div>
       <div class="row-val">T5</div>
 
-      <div class="row-lbl">Level 201 — 300</div>
+      <div class="row-lbl">Level 201–300</div>
       <div class="row-track"><div class="row-fill" style="width:85.7%"></div></div>
       <div class="row-val">T6</div>
 
@@ -1578,7 +1581,7 @@
     </div>
 
     <div data-anim="foot" style="margin-top:auto;padding-top:2vh;border-top:1px solid var(--border-subtle);display:flex;justify-content:space-between;gap:3vw">
-      <div class="t-body-sm" style="max-width:66ch">Trần được kẹp lại mỗi lần vào màn, nên người chơi vừa qua band mới sẽ được nới ngay. Chiều ngược lại thì không: level 1—20 không bao giờ bị hạ tier.</div>
+      <div class="t-body-sm" style="max-width:66ch">Trần được kẹp lại mỗi lần vào màn, nên người chơi vừa sang dải mới là được nới ngay. Chiều ngược lại thì không: level 1–20 không bao giờ bị hạ tier.</div>
       <div class="t-meta" style="text-align:right;white-space:nowrap">GETCEILING(LEVEL)</div>
     </div>
   </div>
@@ -1593,25 +1596,25 @@
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-meta">TIER 1—7 · CÁI GÌ MỞ KHOÁ Ở ĐÂU</div>
+      <div class="t-meta">TIER 1–7 · CÁI GÌ MỞ KHOÁ Ở ĐÂU</div>
       <h2 style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5vw,8.8vh);line-height:1.14;letter-spacing:-.025em">Tier cao thì bàn khác chỗ nào</h2>
     </div>
 
     <div class="stack-row" data-anim="stack" style="margin-top:4.6vh">
       <div class="stack-block b-grey">
-        <div class="layer-nb">TIER 1 — 2</div>
+        <div class="layer-nb">TIER 1–2</div>
         <div class="layer-ttl">Học luật</div>
         <div class="layer-desc">Bàn sạch: không vật cản, không ô ẩn, giữ nguyên toàn bộ ô neo. Quỹ nước rộng nhất — sàn dư 6 rồi 5 nước, đủ tha ba lỗi.</div>
         <div class="layer-tag">HỆ SỐ 1,50 → 1,42</div>
       </div>
       <div class="stack-block b-accent">
-        <div class="layer-nb">TIER 3 — 5</div>
+        <div class="layer-nb">TIER 3–5</div>
         <div class="layer-ttl">Thêm cơ chế</div>
-        <div class="layer-desc">Đóng băng vào từ T3, khoá đếm nước và cặp hai chủ đề từ T4, ô ẩn từ T5. Bắt đầu bỏ bớt ô neo nên phải tự suy ra vùng.</div>
+        <div class="layer-desc">Ô đóng băng có từ T3; T4 thêm khoá đếm nước và ô hai màu; T5 thêm ô ẩn. Bắt đầu bỏ bớt ô neo nên phải tự suy ra vùng.</div>
         <div class="layer-tag">HỆ SỐ 1,34 → 1,18</div>
       </div>
       <div class="stack-block b-ink">
-        <div class="layer-nb">TIER 6 — 7</div>
+        <div class="layer-nb">TIER 6–7</div>
         <div class="layer-ttl">Siết</div>
         <div class="layer-desc">Thêm chìa khoá, hai đến ba ô ẩn, bỏ hai đến ba ô neo. Sàn dư rút xuống còn 2 rồi 1 nước — gần như phải đi tối ưu.</div>
         <div class="layer-tag">HỆ SỐ 1,14 → 1,08</div>
@@ -1642,24 +1645,24 @@
       <div class="half b-grey" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
         <div class="chrome-min" style="margin-bottom:0">
           <div class="l">GIẢI PHÁP ĐỀ XUẤT</div>
-          <div class="r">G1 — G2</div>
+          <div class="r">G1–G2</div>
         </div>
 
         <div data-anim="rules" style="display:flex;flex-direction:column;gap:3vh">
           <div>
             <div class="t-cat" style="margin-bottom:1.2vh">VẤN ĐỀ 01 · BOOSTER</div>
             <div class="t-h-prod" style="margin-bottom:.8vh">Hint không tính nước</div>
-            <div class="t-body-sm" style="margin-bottom:1.4vh">Hint đi hộ một nước mà không trừ quỹ nước — cố ý như vậy. Nhưng mốc thắng-sạch lại đo đúng quỹ nước đó, nên spam hint là thắng-sạch gần như chắc chắn.</div>
+            <div class="t-body-sm" style="margin-bottom:1.4vh">Hint đi hộ một nước mà không trừ quỹ nước — cố ý như vậy. Nhưng mốc thắng sạch lại đo đúng quỹ nước đó, nên dùng hint liên tục là thắng sạch gần như chắc chắn.</div>
             <div style="border-top:2px solid var(--accent);padding-top:1.2vh">
               <span class="t-cat accent">G1 · ĐỀ XUẤT</span>
-              <div class="t-body-sm">Đếm riêng số nước hint. Khác 0 thì ván đó không được tính thắng-sạch.</div>
+              <div class="t-body-sm">Đếm riêng số nước hint. Khác 0 thì ván đó không được tính thắng sạch.</div>
             </div>
           </div>
 
           <div>
             <div class="t-cat" style="margin-bottom:1.2vh">VẤN ĐỀ 02 · CHƠI LẠI</div>
             <div class="t-h-prod" style="margin-bottom:.8vh">Bàn cũ đã thuộc</div>
-            <div class="t-body-sm" style="margin-bottom:1.4vh">Thua lần đầu chưa đủ đổi tier nên vào lại đúng bàn vừa thua. Lượt hai là thi lại đề đã biết, đi gần tối ưu và chạm mốc sạch.</div>
+            <div class="t-body-sm" style="margin-bottom:1.4vh">Thua lần đầu chưa đủ để đổi tier nên vào lại đúng bàn vừa thua. Lượt hai là thi lại đề đã biết, đi gần tối ưu và chạm mốc sạch.</div>
             <div style="border-top:2px solid var(--accent);padding-top:1.2vh">
               <span class="t-cat accent">G2 · ĐỀ XUẤT</span>
               <div class="t-body-sm">Ghi số lượt vào lại. Từ lượt hai chỉ chặn thăng hạng, cố ý không phạt thêm.</div>
@@ -1688,7 +1691,7 @@
       <article class="sub-card" style="background:var(--paper);color:var(--ink)">
         <span class="nb-corner">01</span>
         <div class="t-cat accent" style="margin-bottom:1.2vh">CAO</div>
-        <div class="ttl">Không đo được theo tier</div>
+        <div class="ttl">Không đo được win-rate theo tier</div>
         <div class="desc">Sự kiện kết thúc màn không mang tier. <span style="color:var(--accent)">Bắn một event DDA riêng cho analytics.</span></div>
       </article>
       <article class="sub-card" style="background:var(--paper);color:var(--ink)">
@@ -1707,12 +1710,12 @@
         <span class="nb-corner">04</span>
         <div class="t-cat" style="margin-bottom:1.2vh">TRUNG BÌNH</div>
         <div class="ttl">Tier 7 không tách được người giỏi</div>
-        <div class="desc">Nhóm giỏi nhất vẫn thắng 98%. <span style="color:var(--accent-bright)">Cần lever cơ học mới, không siết thêm quỹ nước.</span></div>
+        <div class="desc">Nhóm giỏi nhất vẫn thắng 98%. <span style="color:var(--accent-bright)">Cần thêm cơ chế mới, không siết thêm quỹ nước.</span></div>
       </article>
       <article class="sub-card">
         <span class="nb-corner">05</span>
         <div class="t-cat" style="margin-bottom:1.2vh">TRUNG BÌNH</div>
-        <div class="ttl">Pool cạn ở late game</div>
+        <div class="ttl">Cạn bàn mới ở cuối game</div>
         <div class="desc">Tái dùng bàn 32–47% sau khoảng level 180. <span style="color:var(--accent-bright)">Tăng số bàn cho cỡ 7×7.</span></div>
       </article>
       <article class="sub-card">
@@ -1742,13 +1745,13 @@
       <div class="tl-node" style="padding:1.8vh 0">
         <span class="dot"></span>
         <span class="yr">NHỊP 01</span>
-        <span class="multi">G1—G2</span>
+        <span class="multi">G1–G2</span>
         <p class="desc">Vá hai đường tắt lên tier. Chưa xong bước này thì mọi số đo sau đều nhiễm.</p>
       </div>
       <div class="tl-node" style="padding:1.8vh 0">
         <span class="dot"></span>
         <span class="yr">NHỊP 02</span>
-        <span class="multi">G3—G5</span>
+        <span class="multi">G3–G5</span>
         <p class="desc">Telemetry theo tier, config hoá ladder, đồng bộ tier lên cloud. Trước soft-launch.</p>
       </div>
       <div class="tl-node accent" style="padding:1.8vh 0">
@@ -1760,8 +1763,8 @@
       <div class="tl-node" style="padding:1.8vh 0">
         <span class="dot"></span>
         <span class="yr">NHỊP 04</span>
-        <span class="multi">G6—G7</span>
-        <p class="desc">Bộ điều khiển nắn quỹ nước theo cohort và lever mới cho tier trần. Mở sau.</p>
+        <span class="multi">G6–G7</span>
+        <p class="desc">Bộ điều khiển tự nắn quỹ nước theo từng nhóm người chơi, và cơ chế mới cho tier trần. Mở sau.</p>
       </div>
     </div>
 
@@ -1890,7 +1893,7 @@ const SPEAKER_NOTES = [
     id: 'ba-con-so', title: 'Hệ thống chỉ đếm ba thứ', section: 'Cơ chế', minutes: 0.5,
     purpose: 'Nén toàn bộ ladder về ba biến, để phần chi tiết phía sau dễ theo',
     talk: [
-      'Đọc thẳng ba cột dưới chân trang: chuỗi thắng-sạch, chuỗi thua, trần dải level',
+      'Đọc thẳng ba cột dưới chân trang: chuỗi thắng sạch, chuỗi thua, trần dải level',
       'Không có điểm số, không có hệ số ẩn nào khác — cố ý giữ đơn giản để giải thích được',
       'Cột 03 màu xanh là thứ người chơi không tự phá được bằng kỹ năng',
       'Toàn bộ logic là hàm thuần, không phụ thuộc engine nên chạy mô phỏng offline được'
@@ -1902,7 +1905,7 @@ const SPEAKER_NOTES = [
     id: 'vong-doi', title: 'Từ lúc bấm Chơi đến lúc tier đổi', section: 'Cơ chế', minutes: 1.4,
     purpose: 'Cho thấy DDA can thiệp ở đúng những điểm nào trong một ván',
     talk: [
-      'Bước 1 chuẩn hoá: vừa qua band mới thì trần nới ra ngay khi vào màn',
+      'Bước 1 chuẩn hoá: vừa sang dải level mới thì trần được nới ra ngay khi vào màn',
       'Bước 2 rút bàn: ưu tiên bàn chưa gặp; nếu ô đó trống thì lùi sang tier DỄ HƠN trước',
       'Bước 3 ghim bàn: chơi lại cùng level phải ra đúng bàn cũ, trừ khi tier đã đổi',
       'Bước 4 phân loại và bước 5 lưu ngay — lưu ngay vì người chơi hay tắt app ở màn hình thắng',
@@ -1926,11 +1929,11 @@ const SPEAKER_NOTES = [
   },
   {
     id: 'thang-sach', title: 'Thắng sạch tính thế nào', section: 'Cơ chế', minutes: 1.5,
-    purpose: 'Biến thắng-sạch từ khái niệm thành phép tính có thể kiểm lại trên một bàn thật',
+    purpose: 'Biến thắng sạch từ khái niệm thành phép tính có thể kiểm lại trên một bàn thật',
     talk: [
-      'Đọc ba bước bên phải theo thứ tự: 9 nước tối ưu, cộng 6 thành 15, cắt nửa còn 12',
+      'Đọc bốn bước bên phải theo thứ tự: 9 nước tối ưu, cộng 6 thành 15, cắt nửa còn 12, dư 6 tha 3 lỗi',
       'Con số 6 là mức dư tối thiểu của tier 1; tier càng cao mức dư này càng nhỏ',
-      'Ba vùng kết quả nằm ở chân bốn cột: 12 trở xuống là sạch, 13—15 vẫn thắng, quá 15 là thua',
+      'Ba vùng kết quả nằm ở chân bốn cột: 12 trở xuống là sạch, 13–15 vẫn thắng, quá 15 là thua',
       'Bản cũ dùng mốc cố định là dư ba nước — bàn nhỏ không bao giờ đạt nên ladder không leo được',
       'Ván có hồi sinh không được tính sạch, vì cộng thêm nước có thể lọt qua ngưỡng'
     ],
@@ -1942,7 +1945,7 @@ const SPEAKER_NOTES = [
     purpose: 'Giải thích vì sao một người giỏi vẫn không nhảy thẳng lên tier 7',
     talk: [
       'Trần dâng theo tiến trình: nội dung khó mở khoá theo hành trình, không chỉ theo kỹ năng',
-      'Kẹp lại mỗi lần vào màn nên vừa qua band mới là được nới ngay',
+      'Kẹp lại mỗi lần vào màn nên vừa sang dải mới là được nới ngay',
       'Đã thử nới trần trong mô phỏng: nhóm khá bị đôn quá sức và lệch xa mục tiêu hơn, nên không ship',
       'Kết hợp với luật hai ván: từ tier 1 lên tier 7 là một hành trình dài, cố ý như vậy'
     ],
@@ -1954,9 +1957,9 @@ const SPEAKER_NOTES = [
     purpose: 'Nối tier với thứ người chơi thật sự nhìn thấy trên bàn',
     talk: [
       'Tier 1–2 là vùng học luật: bàn sạch, quỹ nước rộng nhất, và không bao giờ bị hạ tier',
-      'Tier 3–5 thêm cơ chế: đóng băng, khoá đếm nước, cặp hai chủ đề, ô ẩn — mỗi tier một thứ mới',
+      'Tier 3–5 mỗi tier thêm một thứ: đóng băng, khoá đếm nước kèm ô hai màu, rồi ô ẩn',
       'Tier 6–7 chủ yếu là siết quỹ nước và bỏ bớt ô neo, không thêm cơ chế lạ',
-      'Nói thật với team: đo được thì vật cản gần như không làm bàn khó hơn, vì pipeline tự nới quỹ nước bù lại',
+      'Nói thẳng với team: đo được thì vật cản gần như không làm bàn khó hơn, vì pipeline tự nới quỹ nước bù lại',
       'Nên giá trị của vật cản là biến hoá và cảm giác, còn độ khó thật nằm ở quỹ nước'
     ],
     transition: 'Cơ chế hết ở đây. Phần còn lại là hai lỗ hổng đang có và sáu rủi ro',
