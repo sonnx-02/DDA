@@ -1236,7 +1236,7 @@
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
       <div class="l">TOPIC-SORT · HỆ THỐNG DDA</div>
-      <div class="r">SONAT · 15.08.2026 · 01 / 13</div>
+      <div class="r">SONAT · 15.08.2026 · 01 / 14</div>
     </div>
 
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
@@ -1247,7 +1247,7 @@
       <div data-anim="bottom" style="display:grid;grid-template-rows:auto auto;gap:1.6vh;border-top:1px solid rgba(255,255,255,.22);padding-top:2vh">
         <div data-anim="lead" class="lead" style="max-width:60ch;color:rgba(255,255,255,.88);font-weight:400">Cách hệ DDA của Topic-Sort đang vận hành: tier được xếp ra sao, thắng thua đổi tier thế nào, mỗi tier đưa ra bàn gì. Kèm phần vấn đề, rủi ro và lộ trình.</div>
         <div style="display:flex;justify-content:space-between;align-items:end">
-          <div class="t-meta" style="color:rgba(255,255,255,.62)">YÊU CẦU · CƠ CHẾ · VẤN ĐỀ · RỦI RO · LỘ TRÌNH</div>
+          <div class="t-meta" style="color:rgba(255,255,255,.62)">TỔNG QUAN · YÊU CẦU · CƠ CHẾ · VẤN ĐỀ · RỦI RO · LỘ TRÌNH</div>
           <div class="t-meta" style="color:rgba(255,255,255,.62)">→ dùng phím mũi tên</div>
         </div>
       </div>
@@ -1255,12 +1255,60 @@
   </div>
 </section>
 
-<!-- ============ 02 · S05 Three Layers · kiến trúc hai trục ============ -->
+<!-- ============ 02 · S22 Image Hero · tổng quan trong game ============ -->
+<section class="slide" data-layout="S22" data-animate="image-hero" data-slide-id="tong-quan">
+  <div class="canvas-card" style="padding:0;display:flex;flex-direction:column;overflow:hidden">
+    <div data-anim="img" style="position:relative;flex:0 0 60%;overflow:hidden;background:var(--paper)">
+      <img src="images/02-ingame.png" alt="Màn chơi Topic-Sort: bàn 7x7, thanh tiến độ 0/9, quỹ nước 29" loading="eager"
+           data-image-slot="s22-hero-21x9"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:94% center">
+      <div class="chrome-min" style="position:absolute;top:0;left:0;right:0;padding:5.6vh 5vw 0;color:var(--text-helper)">
+        <div class="l">TỔNG QUAN · TRONG GAME CÓ GÌ</div>
+        <div class="r">02 / 14</div>
+      </div>
+      <div data-anim="title-block" style="position:absolute;left:5vw;top:13vh;background:var(--ink);color:var(--paper);padding:3.2vh 3vw;max-width:44vw">
+        <div class="t-cat" style="color:rgba(255,255,255,.62);margin-bottom:1.6vh">TOPIC-SORT · MỘT MÀN CHƠI</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:1.12;letter-spacing:-.03em">Xếp sticker về<br/>đúng vùng chủ đề</div>
+      </div>
+    </div>
+
+    <div data-anim="kpi" class="image-hero-body">
+      <div style="max-width:52ch;font-family:var(--sans),var(--sans-zh);font-size:max(18px,1.25vw);line-height:1.55;font-weight:400;color:var(--text-primary);letter-spacing:-.005em">
+        Mỗi ô có một chủ đề đích, đọc bằng màu nền. Người chơi kéo thả để đổi chỗ hai sticker — mọi nước đi đều hợp lệ, chỉ tốn nước. Xong hết chủ đề là thắng, hết nước là thua. Hai nút dưới bàn là booster: một cái đi hộ một nước, một cái chỉ ra ô đang sai.
+      </div>
+      <div class="image-hero-stats" style="gap:3vw">
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">CỠ BÀN</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7vh);line-height:.95;letter-spacing:-.04em">7×7</div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="t-body-sm">Cỡ lớn nhất, dùng từ level 121 trở đi.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">CHỦ ĐỀ</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7vh);line-height:.95;letter-spacing:-.04em">9</div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="t-body-sm">Thanh 0/9 đếm số vùng đã hoàn thành.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.6vh">
+          <div style="height:1px;background:var(--ink)"></div>
+          <div class="t-meta">QUỸ NƯỚC</div>
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7vh);line-height:.95;letter-spacing:-.04em;color:var(--accent)">29</div>
+          <div style="height:1px;background:var(--border-subtle);margin-top:auto"></div>
+          <p class="t-body-sm">Thay đổi theo tier, không cố định theo cỡ bàn.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · S05 Three Layers · kiến trúc hai trục ============ -->
 <section class="slide" data-layout="S05" data-animate="stack-build" data-slide-id="kien-truc">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">NỀN TẢNG · KIẾN TRÚC</div>
-      <div class="r">02 / 13</div>
+      <div class="r">03 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1292,12 +1340,12 @@
   </div>
 </section>
 
-<!-- ============ 03 · S04 Six Cells · yêu cầu ============ -->
+<!-- ============ 04 · S04 Six Cells · yêu cầu ============ -->
 <section class="slide" data-layout="S04" data-animate="grid-reveal" data-slide-id="yeu-cau">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">NỀN TẢNG · YÊU CẦU</div>
-      <div class="r">03 / 13</div>
+      <div class="r">04 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1346,7 +1394,7 @@
   </div>
 </section>
 
-<!-- ============ 04 · S09 Statement · chuyển sang phần cơ chế ============ -->
+<!-- ============ 05 · S09 Statement · chuyển sang phần cơ chế ============ -->
 <section class="slide dark" data-layout="S09" data-animate="statement" data-slide-id="ba-con-so">
   <div class="canvas-card">
     <span class="dot-mat lg" style="position:absolute;right:0;top:0;width:30vw;height:30vw" aria-hidden="true"></span>
@@ -1354,7 +1402,7 @@
 
     <div class="chrome-min">
       <div class="l">CƠ CHẾ · BA CON SỐ</div>
-      <div class="r">04 / 13</div>
+      <div class="r">05 / 14</div>
     </div>
 
     <h1 data-anim="statement" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(5.2vw,9.2vh);line-height:1.16;letter-spacing:-.03em;max-width:21ch">Hệ thống không hỏi bạn giỏi đến đâu. Nó chỉ đếm <span style="font-style:italic;font-weight:300">ba thứ</span>.</h1>
@@ -1376,12 +1424,12 @@
   </div>
 </section>
 
-<!-- ============ 05 · S11 Horizontal Timeline · vòng đời một ván ============ -->
+<!-- ============ 06 · S11 Horizontal Timeline · vòng đời một ván ============ -->
 <section class="slide" data-layout="S11" data-animate="timeline-walk" data-slide-id="vong-doi">
   <div class="canvas-card">
     <div class="chrome-min tight">
       <div class="l">CƠ CHẾ · VÒNG ĐỜI MỘT VÁN</div>
-      <div class="r">05 / 13</div>
+      <div class="r">06 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
@@ -1441,12 +1489,12 @@
   </div>
 </section>
 
-<!-- ============ 06 · S08 Duo Compare · luật lên xuống tier ============ -->
+<!-- ============ 07 · S08 Duo Compare · luật lên xuống tier ============ -->
 <section class="slide" data-layout="S08" data-animate="duo-mirror" data-slide-id="luat-tier">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">CƠ CHẾ · LUẬT XẾP TIER</div>
-      <div class="r">06 / 13</div>
+      <div class="r">07 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1482,12 +1530,12 @@
   </div>
 </section>
 
-<!-- ============ 07 · S06 KPI Tower · thắng sạch tính thế nào ============ -->
+<!-- ============ 08 · S06 KPI Tower · thắng sạch tính thế nào ============ -->
 <section class="slide dark" data-layout="S06" data-animate="measure-up" data-slide-id="thang-sach">
   <div class="canvas-card">
     <div class="chrome-min tight">
       <div class="l">CƠ CHẾ · ĐỊNH NGHĨA THẮNG SẠCH</div>
-      <div class="r">07 / 13</div>
+      <div class="r">08 / 14</div>
     </div>
 
     <div data-anim="line" style="display:grid;grid-template-columns:6.5fr 5.5fr;gap:3vw;align-items:end">
@@ -1537,12 +1585,12 @@
   </div>
 </section>
 
-<!-- ============ 08 · S07 H-Bar · trần tier theo dải level ============ -->
+<!-- ============ 09 · S07 H-Bar · trần tier theo dải level ============ -->
 <section class="slide" data-layout="S07" data-animate="bar-grow" data-slide-id="tran-band">
   <div class="canvas-card">
     <div class="chrome-min tight">
       <div class="l">CƠ CHẾ · TRẦN TIER</div>
-      <div class="r">08 / 13</div>
+      <div class="r">09 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
@@ -1587,12 +1635,12 @@
   </div>
 </section>
 
-<!-- ============ 09 · S05 Three Layers · mỗi tier có gì ============ -->
+<!-- ============ 10 · S05 Three Layers · mỗi tier có gì ============ -->
 <section class="slide dark" data-layout="S05" data-animate="stack-build" data-slide-id="tier-noi-dung">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">CƠ CHẾ · NỘI DUNG THEO TIER</div>
-      <div class="r">09 / 13</div>
+      <div class="r">10 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1623,14 +1671,14 @@
   </div>
 </section>
 
-<!-- ============ 10 · S03 Split Statement · vấn đề + giải pháp ============ -->
+<!-- ============ 11 · S03 Split Statement · vấn đề + giải pháp ============ -->
 <section class="slide split" data-layout="S03" data-animate="split-statement" data-slide-id="van-de">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
         <div class="chrome-min" style="margin-bottom:0">
           <div class="l">VẤN ĐỀ</div>
-          <div class="r">10 / 13</div>
+          <div class="r">11 / 14</div>
         </div>
 
         <div data-anim="statement" style="display:flex;flex-direction:column;gap:2vh">
@@ -1674,12 +1722,12 @@
   </div>
 </section>
 
-<!-- ============ 11 · S04 Six Cells · rủi ro + đề xuất ============ -->
+<!-- ============ 12 · S04 Six Cells · rủi ro + đề xuất ============ -->
 <section class="slide dark" data-layout="S04" data-animate="grid-reveal" data-slide-id="rui-ro">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">RỦI RO</div>
-      <div class="r">11 / 13</div>
+      <div class="r">12 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1728,12 +1776,12 @@
   </div>
 </section>
 
-<!-- ============ 12 · S02 Vertical Timeline + KPI · lộ trình ============ -->
+<!-- ============ 13 · S02 Vertical Timeline + KPI · lộ trình ============ -->
 <section class="slide" data-layout="S02" data-animate="progression" data-slide-id="lo-trinh">
   <div class="canvas-card">
     <div class="chrome-min tight">
       <div class="l">LỘ TRÌNH</div>
-      <div class="r">12 / 13</div>
+      <div class="r">13 / 14</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.2vh">
@@ -1789,14 +1837,14 @@
   </div>
 </section>
 
-<!-- ============ 13 · Closing · IKB + ASCII · ba quyết định ============ -->
+<!-- ============ 14 · Closing · IKB + ASCII · ba quyết định ============ -->
 <section class="slide split" data-layout="SWISS-CLOSING-ASCII" data-animate="split-statement" data-slide-id="quyet-dinh">
   <div class="canvas-card">
     <div class="split-half">
       <div class="half b-accent" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
-          <div class="l">13 / 13</div>
+          <div class="l">14 / 14</div>
           <div class="r">CẦN CHỐT</div>
         </div>
 
@@ -1866,7 +1914,20 @@ const SPEAKER_NOTES = [
     cue: 'Dừng 2 giây sau tiêu đề rồi mới nói'
   },
   {
-    id: 'kien-truc', title: 'Hai trục tách rời, một ladder', section: 'Nền tảng', minutes: 1.0,
+    id: 'tong-quan', title: 'Trong game có gì', section: 'Mở đầu', minutes: 1.1,
+    purpose: 'Cho người chưa chơi thấy bàn thật trước khi nghe bất kỳ khái niệm nào',
+    talk: [
+      'Chỉ vào bàn: màu nền của ô là chủ đề đích, sticker là miếng đang đứng ở đó',
+      'Luật gọn trong một câu: kéo thả đổi chỗ hai sticker, mọi nước đều hợp lệ, chỉ tốn nước',
+      'Chỉ lên HUD: Turns là quỹ nước, thanh 0/9 là số vùng đã xong, sao là điểm',
+      'Ảnh này là level 555 nên đang ở cỡ bàn lớn nhất — cỡ bàn do tiến trình quyết, nói ở trang sau',
+      'Con số 29 nước là do tier quyết định, không phải cỡ bàn; đó là lever độ khó chính'
+    ],
+    transition: 'Đã thấy bàn thật rồi thì mới nói được hệ DDA đứng ở đâu trong đó',
+    cue: 'Nếu có người chưa từng chơi, dừng lâu hơn ở trang này'
+  },
+  {
+    id: 'kien-truc', title: 'Hai trục tách rời, một ladder', section: 'Nền tảng', minutes: 0.9,
     purpose: 'Cho cả team và leader cùng một mô hình tư duy trước khi đi vào chi tiết',
     talk: [
       'Ý quan trọng nhất: cỡ bàn theo tiến trình, độ khó theo thành tích — hai trục hoàn toàn độc lập',
